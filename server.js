@@ -5,7 +5,7 @@ const app = express();
 app.use(express.static(path.join(__dirname, 'build')));
 
 const bodyParser = require('body-parser')
-const apiRoute = require('./src/route/api');
+const apiRoute = require('./routes');
 app.use('/api', apiRoute);
 app.use(bodyParser.json());
 
